@@ -179,6 +179,7 @@ WantedBy=multi-user.target
 
 ```shell
 # Start the flask-gunicorn service:
+/REST#> systemctl daemon-reload
 /REST#> systemctl start flask-gunicorn
 # Enable it so that it starts at boot:
 /REST#> systemctl enable flask-gunicorn
