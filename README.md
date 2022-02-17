@@ -167,6 +167,7 @@ After=network.target
 User=<yourUser>
 WorkingDirectory=<path>
 ExecStart=gunicorn -w 4 --bind 0.0.0.0:<port> "wsgi:app"
+ExecStop=pkill -f "/usr/bin/gunicorn"
 
 [Install]
 WantedBy=multi-user.target
